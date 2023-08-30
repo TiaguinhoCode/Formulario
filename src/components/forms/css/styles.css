@@ -1,0 +1,159 @@
+.container {
+    width: 20%;
+    height: 60vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+}
+
+.formulario {
+    width: 40%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    border-top-right-radius: 0px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.37);
+}
+
+.form-img img {
+    width: 35.8rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.37);
+}
+
+.formulario .form_title {
+    margin-top: 1em;
+    margin-bottom: 15px;
+}
+
+.formulario .form_title .titulo{
+   font-size: 26px;
+   font-weight: bold;
+}
+
+.formulario .form_envio {
+    content: '';
+    display: block;
+    align-items: end;
+    width: 5rem;
+    height: 0.3rem;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 6px;
+    background-color: #000;
+}
+
+.container_label {
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.container_label .icon_descricao {
+    display: flex;
+    position: absolute;
+}
+
+.container_label .icon_descricao ion-icon {
+   font-size: 18px;
+   padding: 0.6em 0.2em;
+}
+
+.container_input #id, #descricao, #valor, #estoque{
+    padding-left: 1.8em;
+}
+
+.container_label #descrição {
+    width: 300px;
+}
+
+.container_label input {
+    width: 200px;
+}
+
+.container_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.button_envia, .button_cancela {
+    width: 30%;
+    border-radius: 8px;
+    margin: 1em;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.37);
+}
+.button_cancela {
+    background-color: #111827;
+}
+
+/*
+section {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    height: 580px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.329);
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 2em;
+}
+
+.container_label {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.container_label label:last-child {
+    margin-left: 15em;
+}
+
+.container_id_valor label:last-child {
+    margin-left: 24em;
+    padding-top: 10em;
+}
+
+.container_input, .container_descricao, .container_id,
+.container_referencia {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.container_input, .container_descricao:first-child,
+.container_id:first-child {
+    padding-right: 1em;
+}
+
+.container_input .icon_descricao,
+.icon_Referencia {
+    padding-left: 0.5em;
+    display: block;
+    font-size: 18px;
+    padding-top: 0.1em;
+}
+
+.container_input .input_descricao {
+    width: 100%;
+    padding-left: 2em;
+    background-color: #fff;
+}
+
+
+/* container_input */
