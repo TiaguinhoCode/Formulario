@@ -5,6 +5,14 @@
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
 }
 
+
+.fundo {
+    background: url(./../../../assets/background_registro.jpg) no-repeat;
+    background-size: cover;
+    width: 35.8em;
+    height: 35.8em;
+}
+
 .formulario {
     width: 40%;
     height: 60vh;
@@ -95,6 +103,34 @@
 .button_cancela {
     background-color: #111827;
 }
+
+@media (max-width: 918px) {
+    .formulario {
+        width: 80%;
+    }
+  }
+@media (max-width: 782px) {
+    .formulario {
+        width: 80%;
+    }
+    .container_label {
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+    }
+  }
+
+@media (max-width: 782px) {
+    .formulario {
+        width: 80%;
+    }
+    .container_label {
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+    }
+    .fundo {
+        display: none;
+    }
+  }
 
 /*
 section {

@@ -1,13 +1,14 @@
 import './css/styles.css'
 import background_registro from './../../assets/background_registro.jpg'
+import { useEffect, useState } from 'react'
 
 export const Formulario = () => {
     return (
         <>
           
             <div class="form-img">
-                <div class="fundo mb-4">
-                    <img src={background_registro} alt="" />
+                <div className="fundo mb-4">
+                    
                 </div>
             </div>
 
