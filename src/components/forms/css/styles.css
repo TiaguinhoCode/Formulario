@@ -1,21 +1,6 @@
-.container {
-    width: 20%;
-    height: 60vh;
-    display: flex;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
-}
-
-
-.fundo {
-    background: url(./../../../assets/background_registro.jpg) no-repeat;
-    background-size: cover;
-    width: 35.8em;
-    height: 35.8em;
-}
-
 .formulario {
-    width: 40%;
-    height: 60vh;
+    width: 50%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,14 +9,7 @@
     border-radius: 8px;
     border-top-right-radius: 0px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.37);
-}
-
-.form-img img {
-    width: 35.8rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.37);
+    overflow: hidden;
 }
 
 .formulario .form_title {
@@ -56,14 +34,17 @@
     background-color: #000;
 }
 
+.container_form {
+    display: flex;
+}
+
 .container_label {
-    margin-top: 1em;
+    padding: 1.5em;
+    margin-top: 1.5em;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
-    align-items: center;
 }
-
 
 .container_label .icon_descricao {
     display: flex;
@@ -79,19 +60,13 @@
     padding-left: 1.8em;
 }
 
-.container_label #descrição {
-    width: 300px;
-}
-
-.container_label input {
-    width: 200px;
-}
-
 .container_button {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .button_envia, .button_cancela {
@@ -104,92 +79,70 @@
     background-color: #111827;
 }
 
-@media (max-width: 918px) {
-    .formulario {
-        width: 80%;
-    }
-  }
-@media (max-width: 782px) {
-    .formulario {
-        width: 80%;
-    }
+input {
+    width: 250px;
+}
+
+@media (max-width: 1598px) {
     .container_label {
+        display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 5px;
+        gap: 10px;
     }
-  }
+    input {
+        width: 290px;
+    }
+}
 
-@media (max-width: 782px) {
+@media (max-width: 1204px) {
     .formulario {
-        width: 80%;
+        width: 100%;
+        max-width: 400px; 
+        margin: 0 auto; 
+        display: flex;
+        flex-direction: column; 
+        background-color: #fff;
+        padding: 1.5em;
+        border-radius: 8px;
+        border-top-right-radius: 0px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.37);
     }
+    
     .container_label {
-        grid-template-columns: 1fr 1fr;
-        gap: 5px;
+        display: grid;
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+        align-items: center;
+        padding: 1em;
     }
-    .fundo {
-        display: none;
+    
+    .container_label input {
+        width: 100%; /* Largura total em telas menores */
+        padding-left: 1.8em;
     }
-  }
-
-/*
-section {
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    height: 580px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.329);
+    
+    .container_button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Espaçamento entre botões em telas menores */
+        flex-direction: column; /* Altere para uma coluna em telas menores */
+        padding-bottom: 2em;
+    }
+    
+    .button_envia, .button_cancela {
+        width: 100%; /* Largura total em telas menores */
+        border-radius: 8px;
+        margin: 0.5em 0; /* Adicione algum espaço vertical entre os botões */
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.37);
+    }
 }
 
-form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 2em;
+ /* Media query para telas menores */
+ @media screen and (max-width: 768px) {
+    .formulario {
+        max-width: none; /* Remova a largura máxima */
+    }
+    
+    .container_label {
+        padding: 0.5em; /* Reduza o espaçamento entre rótulos e inputs */
+    }
 }
-
-.container_label {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-
-.container_label label:last-child {
-    margin-left: 15em;
-}
-
-.container_id_valor label:last-child {
-    margin-left: 24em;
-    padding-top: 10em;
-}
-
-.container_input, .container_descricao, .container_id,
-.container_referencia {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-.container_input, .container_descricao:first-child,
-.container_id:first-child {
-    padding-right: 1em;
-}
-
-.container_input .icon_descricao,
-.icon_Referencia {
-    padding-left: 0.5em;
-    display: block;
-    font-size: 18px;
-    padding-top: 0.1em;
-}
-
-.container_input .input_descricao {
-    width: 100%;
-    padding-left: 2em;
-    background-color: #fff;
-}
-
-
-/* container_input */
