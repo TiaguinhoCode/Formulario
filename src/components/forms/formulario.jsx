@@ -9,7 +9,7 @@ import './css/styles.css'
 
 // Validação do Formulario
 const validationPost = yup.object().shape({
-    id: yup.number().required().typeError("Por favor preencha o campo id").min(0),
+    unidade: yup.number().required().typeError("Por favor preencha o campo unidade").min(0),
     descricao: yup.string().required("Por favor preencha o campo descrição").max(100, "O campo descrição precisar ter menos de 100 caracteres"),
     estoque: yup.number().required().typeError("Por favor preencha o campo estoque").min(0, "Por favor insira valor maior que 0"),
     referencia: yup.string().required("Por favor preencha o campo referencia").max(100, "O campo descrição precisar ter menos de 100 caracteres"),
@@ -25,13 +25,22 @@ export const Formulario = () => {
     })
 
     // const addPost = data => console.log(data)
-    const addPost = data => axios.post("http://localhost:3004/profile", data)
-        .then(() => {
-            console.log("Foi enviado com sucesso os dados!")
-        })
-        .catch(() => {
-            console.log("Erro no envio")
-        })
+    const addPost = data => axios.post("https://api.catalogo.website/v1/api/products", {
+        "description": data.descricao,
+        "urlImage": data.imagem,
+        "unid": data.unidade,
+        "ref": data.referencia,
+        "brand": data.marca,
+        "value": data.valor,
+        "stock": data.estoque,
+    })
+    .then(() => {
+        console.log("Foi enviado com sucesso os dados!")
+    })
+    .catch((error) => {
+        console.log("Erro no envio", error)
+    })
+        
 
 
 
@@ -54,12 +63,12 @@ export const Formulario = () => {
                     <div className="container_form">
                         <div className="container_label">
                             <div className="container_input">
-                                <label htmlFor="website-admin" className="mb-2 text-sm font-medium text-gray-900 dark:text-white">ID:</label>
+                                <label htmlFor="website-admin" className="mb-2 text-sm font-medium text-gray-900 dark:text-white">Unidade:</label>
                                 <div className="icon_descricao">
                                     <ion-icon name="key"></ion-icon>
                                 </div>
-                                <input {...register("id")} type="number" name="id" id="id" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" />
-                                <p className='erro_menssage'>{errors.id?.message}</p>
+                                <input {...register("unidade")} type="number" name="unidade" id="unidade" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" />
+                                <p className='erro_menssage'>{errors.unidade?.message}</p>
                             </div>
 
                             <div className="container_input">
