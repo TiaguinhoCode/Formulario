@@ -1,0 +1,32 @@
+.container_header {
+    width: 100%;
+}
+
+.title {
+    font-size: 2em;
+}
+
+.container_pesquisa {
+    display: flex;
+    align-items: center;
+}
+
+.container_pesquisa div ion-icon{
+   font-size: 1.2em;
+   padding: 0.5em;
+   display: flex;
+}
+
+#default-search {
+    padding: 1em;
+    width: 600px;
+    padding-left: 2.3em;
+}
+
+.container_pesquisa button {
+    margin: 1em;
+}
+
+.btn_excluir {
+    background-color: #4CAF50;
+}

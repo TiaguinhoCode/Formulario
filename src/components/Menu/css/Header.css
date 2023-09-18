@@ -1,0 +1,70 @@
+#logo-sidebar {
+    width: 240px;
+    height: 100%;
+    padding: 40px 10px 30px 10px;
+    border-right: 1px solid #a5a4a4;
+    transition: all 0.8s;
+}
+
+#logo-sidebar header a{
+    width: 100%;
+    margin-bottom: 16px;
+    display: flex;
+}
+
+#logo-sidebar header .user_icon ion-icon{
+    padding-right: 0.2em;   
+    font-size: 2.2em 
+}
+
+#logo-sidebar header a ion-icon{
+    font-size: 1.9em;
+    min-height: 35px;
+    object-fit: cover;
+    transition: transform 0.35s;
+}
+
+#logo-sidebar header button:hover {
+    transform: scale(1.1);
+    background-color: #000;
+    color: #fff;
+}
+
+nav {
+    flex: 1 1 auto;
+    width: 100%;
+}
+
+#container_nav{
+    padding: 1em;
+}
+
+#container_nav li button{
+   gap: 10px;
+}
+
+#container_nav li button ion-icon{
+   font-size: 2.1em;
+}
+
+ @media (width < 920px) {
+     #logo-sidebar {
+        width: 75px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #logo-sidebar span, 
+    #container_nav li a span{
+        display: none;
+    }
+
+    #container_nav ion-icon{
+        font-size: 2em;
+    } 
+
+} 
