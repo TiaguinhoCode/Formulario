@@ -11,7 +11,7 @@ function App() {
         <Header/> 
         
         <main className="main">
-          {/* <Formulario/> */}
+          {/* <Formulario/>  */}
           <FormHeader/>
         </main>
     </div>
