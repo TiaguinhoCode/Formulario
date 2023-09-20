@@ -1,0 +1,46 @@
+.Edit_formulario {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+/* 
+.conteudo {
+  display: flex;
+  justify-content: space-around;
+} */
+/* 
+.formulario_container {
+ width: 50%;
+ margin-left: 1em;
+} */
+
+/* modal */
+.Background_modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+@media (max-width: 1204px) { 
+  .Conteudo_modal {
+    width: 80%;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .Conteudo_modal {
+    width: 100%;
+  }
+ }

@@ -27,12 +27,54 @@ body {
   width: 100%;
   display: flex;
   padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+/* Ver os blocos */
+.tamanho {
+  border: 1px solid red;
 }
 
+.conteudo {
+  width: 100%;
+  background-color: #F5F5F5;
+}
+
+/* Animação */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+.fadein {
+  animation: fadeIn 1s ease-in-out; 
+}
+
+.modal.modal-open {
+  opacity: 1;
+  visibility: visible;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Adiciona a classe 'modal-closed' quando o modal estiver fechado */
+.modal.modal-closed {
+  opacity: 0;
+  visibility: hidden;
+  animation: fadeOut 0.3s ease-in-out;
+}
 
 @media (width < 920px) {
     .main {
       transition: margin 0.4s;
       margin-left: 78px;
+      display: flex;
+      flex-direction: column;
+      width: 820px;
     }
 }

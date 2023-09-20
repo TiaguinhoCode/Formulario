@@ -1,0 +1,47 @@
+.produtoImage {
+    width: 200px;
+}
+
+.tabela_container {
+    width: 100%;
+    border: 1px solid #cecece;
+}
+
+.tabela_cabecalho {
+    border-bottom: 1px solid #cecece;
+}
+
+td {
+    padding: 1em;
+    padding-left: 5.8em;
+    border-bottom: 1px solid #cecece;
+}
+
+#first_product {
+    width: 80px;
+}
+
+.button_acao button {
+    color: #fff;
+}
+
+.button_remove {
+    background-color: #FF0000;
+}
+.button_remove:hover {
+    background-color: #ca1414 ;
+}
+
+.button_acao button:last-child {
+    margin-left: 0.5em;
+}
+
+
+@media (width < 920px) {
+    .tabela_container {
+        width: 50%;
+    }
+
+   
+}
+

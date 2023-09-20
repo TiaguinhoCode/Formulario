@@ -1,6 +1,7 @@
 import React from 'react'
 import 'tailwindcss/tailwind.css';
 import './css/Header.css'
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -21,40 +22,54 @@ const Header = () => {
                     <nav>
                         <ul id='container_nav' className='space-y-2 font-medium'>
                             <li>
-                                <button href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                    <ion-icon name="home-outline"></ion-icon>
-                                    <span className="ml-3">Home</span>
-                                </button>
+                                <Link to="/">
+                                    <button href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                        <ion-icon name="home-outline"></ion-icon>
+                                        <span className="ml-3">Home</span>
+                                    </button>
+                                </Link>
                             </li>
                             <li>
-                                <button href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                    <ion-icon name="cart-outline"></ion-icon>
-                                    <span className="flex-1 ml-3 whitespace-nowrap">Pedidos</span>
-                                </button>
+                                <Link to="/">
+                                    <button href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                        <ion-icon name="cart-outline"></ion-icon>
+                                        <span className="flex-1 ml-3 whitespace-nowrap">Pedidos</span>
+                                    </button>
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link to="/produto">
+                                    <button href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                        <ion-icon name="pricetags-outline"></ion-icon>
+                                        <span className="flex-1 ml-3 whitespace-nowrap">Produtos</span>
+                                    </button>
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link to="/">
+                                    <button href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                        <ion-icon name="person-outline"></ion-icon>
+                                        <span className="flex-1 ml-3 whitespace-nowrap">Users</span>
+                                    </button>
+                                </Link>
                             </li>
                             <li>
-                                <button href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                    <ion-icon name="pricetags-outline"></ion-icon>
-                                    <span className="flex-1 ml-3 whitespace-nowrap">Produtos</span>
-                                </button>
+                                <Link to="/">
+                                    <button href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                        <ion-icon name="enter-outline"></ion-icon>
+                                        <span className="flex-1 ml-3 whitespace-nowrap">Sign In</span>
+                                    </button>
+                                </Link>
                             </li>
                             <li>
-                                <button href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                    <ion-icon name="person-outline"></ion-icon>
-                                    <span className="flex-1 ml-3 whitespace-nowrap">Users</span>
-                                </button>
-                            </li>
-                            <li>
-                                <button href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                    <ion-icon name="enter-outline"></ion-icon>
-                                    <span className="flex-1 ml-3 whitespace-nowrap">Sign In</span>
-                                </button>
-                            </li>
-                            <li>
-                                <button href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                    <ion-icon name="documents-outline"></ion-icon>
-                                    <span className="flex-1 ml-3 whitespace-nowrap">Sign Up</span>
-                                </button>
+                                <Link to="/">
+                                    <button href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                        <ion-icon name="documents-outline"></ion-icon>
+                                        <span className="flex-1 ml-3 whitespace-nowrap">Sign Up</span>
+                                    </button>
+                                </Link>
                             </li>
                         </ul>
                     </nav>
