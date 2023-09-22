@@ -56,7 +56,7 @@ const Header = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/">
+                                <Link to="/login">
                                     <button href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                                         <ion-icon name="enter-outline"></ion-icon>
                                         <span className="flex-1 ml-3 whitespace-nowrap">Sign In</span>

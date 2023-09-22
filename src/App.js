@@ -9,6 +9,9 @@ import FormHeader from "./components/FormHeader/FormHeader";
 import FormContent from "./components/FormContent/FormContent";
 import EditProduto from "./template/Produto/Produtos";
 import { Formulario } from "./components/forms/formulario";
+import { AppRouter } from './template/Routes/Routes';
+import { Login } from './components/Pages/Login/Login';
+import { Register } from './components/Pages/Register/Register';
 
 
 function App() {
@@ -20,6 +23,8 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/produto' element={<Produtos/>}/>
           <Route path='/produto/:id' element={<Formulario/>}/>
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/registro' element={<Register/>}/>
           
         </Routes>
       </Router>

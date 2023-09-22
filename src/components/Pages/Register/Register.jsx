@@ -1,7 +1,8 @@
-import { LayoutComponents } from "../../components/LayoutComponents/LayoutComponents"
+import { LayoutComponents } from "../../LayoutComponents/LayoutComponents"
 import { useState } from 'react';
-import contato from '../../assets/contato.png'
+import contato from '../../../assets/contato.png'
 import { Link } from 'react-router-dom';
+import Header from "../../Menu/Header";
 
 export const Register = () => {
 
@@ -10,6 +11,10 @@ export const Register = () => {
     const [password, setPassword] = useState("")
 
     return (
+
+      <>
+      <Header />
+      <main className="main">
         <LayoutComponents>
             <form className="login-form">
               <span className="login-form-title">Criar Cadastro</span>
@@ -54,11 +59,13 @@ export const Register = () => {
             <div className='text-center'>
               <span className='txt1'>Já possui Cadastro?</span>
 
-              <Link className='txt2' to="/logar">
+              <Link className='txt2' to="/login">
                 Acessar Cadastro</Link>
             </div>
 
           </form>
         </LayoutComponents>
+        </main>
+        </>
     )
 }

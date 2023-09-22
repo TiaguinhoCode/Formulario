@@ -11,21 +11,21 @@
 
 
 .container-login {
-    width: 80%;
-    min-height: 90vh;
-    position: relative;
+    width: 100%;
+    min-height: 100vh;
 
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 
-    background-color: #fff;
+    padding: 15px;
+    background-color: #e0e0e0;
 }
 
 .wrap-login {
     width: 390px;
-    background-color: #f1f1f1;
+    background-color: #fff;
     border-radius: 10px;
 
     overflow: hidden;
@@ -50,9 +50,6 @@
 }
 
 .login-form-title img {
-    position: relative;
-    display: flex;
-    left: 90px;
     width: 90px;
 }
 

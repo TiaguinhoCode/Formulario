@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import contato from '../../assets/contato.png'
-import { LayoutComponents } from '../../components/LayoutComponents/LayoutComponents';
+import contato from '../../../assets/contato.png'
+import { LayoutComponents } from '../../LayoutComponents/LayoutComponents';
 import { Link } from 'react-router-dom';
+import Header from '../../Menu/Header';
 
 
 export const Login = () => {
@@ -10,6 +11,9 @@ export const Login = () => {
     const [password, setPassword] = useState("")
 
     return (
+      <>
+      <Header />
+      <main className="main">
       <LayoutComponents>
             <form className="login-form">
               <span className="login-form-title">Login Usuario</span>
@@ -38,17 +42,19 @@ export const Login = () => {
             </div>
 
             <div className='container-login-form-btn'>
-              <button className='login-form-btn'> Login</button>
+              <button className='login-form-btn'>Login</button>
             </div>
 
             <div className='text-center'>
               <span className='txt1'>Não possui Cadastro?</span>
 
-              <Link className='txt2' to="/register">
+              <Link className='txt2' to="/registro">
                 Criar Cadastro</Link>
             </div>
 
           </form>
           </LayoutComponents>
+          </main>
+          </>
     );
 }
